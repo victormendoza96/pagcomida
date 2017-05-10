@@ -1,17 +1,12 @@
 body {
 	margin: 0;
-
+background-image: url('../img/cir.png');
+background-size: cover (100% 100%);
 }
 * {
 	box-sizing: border-box;
 }
 
-body * {
-	background-color: rgba(0,0,0,0.2);
-}
-div.derc{
-
-}
 div p.center{
 	margin: 0;
 	text-align: center;
@@ -21,11 +16,14 @@ div p.center{
 
 
 li {
-	list-style: none;	
+	list-style: none;
+	background-color: rgba(0,0,0,0.1);	
 }
 li div{
 	width: 100%;
 	height:100%;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.2);
 }
 li div img{
 	width: 100%;
@@ -41,24 +39,33 @@ div.animacion {
 div.izq{
 	width: 10px;
 	height: 120px;
-	background-color: red;
+	background-color: #BC3333;
 	position: absolute;
 	bottom:0;
 	left: 90px;
 	transform: rotate(20deg);
      border-radius:50% ;
-     animation: efect 4s infinite alternate; 
+     animation: efect 5s infinite alternate; 
 }
 div.derc{
 	width: 10px;
 	height: 120px;
 	top:25px;
-	background-color: red;
+	background-color: #BC3333;
 	position: absolute;
 	transform: rotate(-20deg);
 	border-radius:50% ;
 	left: 50px;
-	animation: efect 4s infinite alternate;
+	animation: efect 5s infinite alternate;
+}
+div.op{
+	position: relative;
+    top: 0%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    text-align: center;
+    padding: 15%;
+
 }
 .bigdiv {
 	width: 100%;
@@ -79,13 +86,14 @@ div h2{
 	margin: 0;
 }
 .mid {
-	width: 40%;
-    height: 75%;
+	width: 400px;
+    height: 81%;
     position: absolute;
-    top: 19%;
+    top: 13%;
     left: 30%;
     padding: 20px;
     padding-top: 300px;
+    background-color: #DACECE;
 
 }
 
@@ -95,6 +103,7 @@ div h2{
     position: relative;
     top: -100px;
     left: 90px;
+    border-color: #BC3333; 
  }
 footer {
 
@@ -104,6 +113,8 @@ footer {
 	height: 200px;
 	margin: 0;
 	padding: 0;
+	border-bottom: 10px;
+	border-collapse: red;
 
 }
 ul{
@@ -124,6 +135,7 @@ footer ul li {
 	width: 25%;
 	padding: 25px;
 	height: 100%
+
 }
 ul li:nth-child(2) {
 	left: 25%
@@ -134,21 +146,40 @@ ul li:nth-child(3) {
 ul li:nth-child(4) {
 	left: 75%
 }
-.center:hover{
-	border-radius: 50%
-}
 h3{
 	margin: 0;
 	padding: 0;
 	text-align: center;
+	background-color: #DACECE;
+    color: #BC3333;
+    
 }
 
 @keyframes efect{
 	from {height: 0}
+     50%{transform: rotate(360deg);}
+	 80%{ height: 120px}
 
-	 90%{ height: 120px}
 }
-img{
+h2 img{
 	position: relative;
 	left: 25%;
+
+}
+ul{
+	background-color: #FF2D0B;
+}
+video{
+	position: absolute;
+	width: 500px;
+	height: 300px;
+	top: 0;
+}
+li div:hover div.op{
+	animation: mover 0.4s  linear forwards;
+}
+@keyframes mover {
+	
+	0%{top: -1%;}
+	100%{top: -102%;}
 }
